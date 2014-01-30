@@ -1,0 +1,13 @@
+<h1>This is your dashboard!</h1>
+
+<%= form_for @dashboard.new_text_yell do |f| %>
+  <%= f.text_field :body, placeholder: "Enter your yell here.." %>
+  <%= f.submit "Yell!" %>
+<% end %>
+
+<%= form_for @dashboard.new_photo_yell do |f| %>
+  <%= f.file_field :image %>
+  <%= f.submit "Yell!" %>
+<% end %>
+
+<%= render @dashboard.timeline %>

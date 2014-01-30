@@ -1,0 +1,9 @@
+<%= div_for yell do %>
+  <%= gravatar yell.user %>
+  <%= link_to yell.user.username, yell.user %>
+  yelled
+  <div>
+    <%= render yell.content %>
+  </div>
+  <%= link_to time_ago_in_words(yell.created_at), yell %>
+<% end %>
